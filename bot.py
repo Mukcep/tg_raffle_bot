@@ -1,20 +1,14 @@
 from typing import Dict, List
-import peewee as pw
 import models
-import datetime
 import logging
 
-from typing import TypedDict
-
 from aiogram import Bot, Dispatcher, executor, types
-from aiogram.dispatcher import FSMContext
-from aiogram.dispatcher.filters.state import State, StatesGroup
-from aiogram.types import InlineKeyboardButton, message
+from aiogram.types import InlineKeyboardButton
 from aiogram.utils.callback_data import CallbackData
 from aiogram.types import InlineKeyboardMarkup
 
 #
-API_TOKEN = 'TOKEN'
+API_TOKEN = 'TOKEN' 
 
 logging.basicConfig(level=logging.INFO)
 
@@ -25,9 +19,6 @@ raffle_cb = CallbackData('raffle', 'action')
 
 raffles = {}
 # 
-
-class BotStates(StatesGroup):
-    STATE_STARTED_RAFFLE = State()
 
 def get_raffle_by_chat_id(chat_id) -> models.Raffle:
     if chat_id in raffles:

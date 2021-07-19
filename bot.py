@@ -14,7 +14,7 @@ from aiogram.utils.callback_data import CallbackData
 from aiogram.types import InlineKeyboardMarkup
 
 #
-API_TOKEN = '1135718156:AAFyfrZQozItmuXbhrSetAZ5Fu94CHx0drI'
+API_TOKEN = 'TOKEN'
 
 logging.basicConfig(level=logging.INFO)
 
